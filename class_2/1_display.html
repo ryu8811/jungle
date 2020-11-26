@@ -12,7 +12,28 @@
 				background:#333;
 				color:#fff;
 				padding:20px;
+				text-align:center;
 			}
+
+			/* inlie, inline-block */
+			.header h1 {display:inline-block;margin-right:100px;}
+			.header .nav {display:inline-block;}
+
+			/* float을 활용한 좌우배치
+			.container .aside {width:200px;height:400px;background:#777;float:left;}
+			.container .section {background:#88deed;width:calc(100% - 200px);height:400px;float:right;} /* calc 속성 : width값 100% 에서 나머지 값을 자동 계산해서 채워준다.*/
+
+			/* table을 활용한 좌우배치
+			.container {display:table;width:100%;}
+			.container .aside {background:#777;width:200px;display:table-cell;}
+			.container .section {background:#88deed;display:table-cell;}*/
+
+			/* flex를 이용한 좌우배치 : ex10부터 지원 */
+			.container {display:flex;width:1200px;margin:0 auto;} /* 부모에게 고정된 width값을 주지 않으면 전체에 채워짐 */
+			.container .aside {background:#777;width:200px;} /* width 값을 변경해도 깨짐없이 채워진다. */
+			.container .section {background:#88deed;flex:1;}
+
+
 		</style>
 
   </head>

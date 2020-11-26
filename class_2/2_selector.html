@@ -15,6 +15,34 @@
 			}
 
 			.container{width:800px; margin:0 auto;text-align:center}
+
+			/*.section.box ul li {display:inline-block;}
+			.section.box ul li:first-child {color:#f00}
+			.section.box ul li:nth-child(2) {color:#00f} /* 다른 속성들도 테스트. last-of-type */
+			/*.section.box ul > * {border:1px solid #0ff;} /* *:모든 선택자 */
+			/*.section.box ul li:last-child > a {font-size:20px}
+			.section.box ul li+li{padding-right:10px} /* 첫번째 태그를 제외한 나머지 태그에 스타일을 적용하고자 할때 쓰는 인접선택자 */
+			/*.section.box ul li:before{content:'';display:inline-block;width:3px;height:3px;background:#f00;vertical-align:middle;margin-right:5px;} /* bullet 요소 넣을 때 자주 사용 */
+			/*.section.box ul li:after{content:'%'} /* 가상의 언어,도형, 디자인 적 요소를 넣어줄때 */
+			/*.section.box ul li a:hover {color:#999}	
+
+			.section.link div a:hover{font-weight:bold;}*/
+
+			/* box */
+			.section.box .box {width:200px;height:100px;background:#f00;float:left;list-style:none;line-height:100px}
+			.section.box ul {padding:0;margin:0;}
+			.section.box .box+.box {margin-left:100px;}
+			.section.box .box:nth-child(2) {background:#000;color:#fff}
+			.section.box .box:hover {background:#0f0}
+			.section.box:after {content:'';display:block;clear:both;}
+
+
+			/* link */
+			.section.link > div {display:inline-block;width:50px;height:50px;border:3px solid #f00}
+
+			/* txt */
+			.section.txt {background:#eee;text-align:left;padding:20px;line-height:30px;}
+
 		</style>
 
   </head>
@@ -29,7 +57,7 @@
 							<a href="#">box1</a>
 						</li>
 						<li class="box">
-							<a href="#">box2</a>
+							box2
 						</li>
 						<li class="box">
 							<a href="#">box3</a>
