@@ -3,7 +3,7 @@ body{margin:0; padding:0}
 h1{margin:0}
 
 header{background: #333; color:#fff; height:70px;}
-header:after{content:''; display: block; clear: both}
+header:after{content:''; display: block; clear: both} /* after선택자 : 부모 선택자에 포함된 모든 스타일이 끝났을 때 실행하겠다. */
 header h1{float:left}
 header nav{float:right}
 
