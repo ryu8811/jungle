@@ -13,6 +13,44 @@
 				color:#fff;
 				padding:20px;
 			}
+			
+			/* transition 
+			.box {width:50px;height:50px;background:#f00;
+				transition: width .5s, height 2s, background-color 1s; /* 속성별로 시간을 따로 줄 수 있다. */
+				/* transition: all 1s, 단독 사용은 불가, hover, click 등 사용자 반응에 의해 이벤트가 실행될때 주는 효과 
+			}
+			.box:hover {width:100px;height:100px;background:#00f;margin-left:20px;} */
+			
+
+			/* animation */
+			/*.box {width:50px;height:50px;background:#f00;
+				animation:jungle_ani 3s infinite; /* 단독 사용 가능, 사용자 반응이 없이 사용 가능 			
+			}
+			@keyframes jungle_ani {
+				0%{width:50px;height:50px;}
+				50%{width:100px;height:50px;margin-left:50px;transform:rotate(180deg)} /* transform 의 다양한 효과 
+				100%{width:50px;height:50px;}
+			}*/
+			/* transform 
+			.box {position:absolute;top:200px;left:100px;width:50px;height:50px;background:#f00;
+				_transform:translateX(100px); _animation:jungle_ani 3s;
+				transition: transform 0.5S;
+				/* 
+				scale(3) : 3배 만큼 커짐, 
+				translate(50px, 200px) : 오른쪽으로 50, 아래로 200/ translateX, transleteY
+				rotate(45deg) : 45도 시계방향으로 돌리겠다. 
+				skew(10deg) : 10도 비틀겠다.
+				
+			}
+			.box:hover {transform:scale(2);}*/
+
+			/* 응용 */
+			.section {text-align:center;padding:50px 0;}
+			.box {width:100px;height:100px;background:#99f;display:inline-block;vertical-align:middle;
+				transition:all 1s;
+			}
+			.box + .box  {margin-left:50px;}
+			.box:hover {transform:scale(2) rotate(45deg);background:#F99;}
 		</style>
 
   </head>
@@ -27,7 +65,9 @@
     </div>
 		<div class="container">
 				<div class="section">
-					
+					<div class="box"></div>
+					<div class="box"></div>
+					<div class="box"></div>
 				</div>
 				
 		</div>

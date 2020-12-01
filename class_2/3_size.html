@@ -6,9 +6,16 @@
     <title>html</title>
 		<style>
 			body, h1{margin:0}
-			
-			.wrap{width:700px; height:400px; background:#ccc}
+			html, body {_height:100%;}
+			.wrap{width:100vw; height:50vh; background:#ccc;padding:20px;} /* %값은 부모를 기준으로 적용된다. */
+			.unit {_background:#f00;_height:30vh;}
 
+			/* vw&vh : 넓이와 높이, 부모를 무시하고 윈도우 창 사이즈 기준. viewport, ie9버전 이상 사용 가능 */
+			/* calc : 사이즈 연산이 가능하게 하는 속성, +,-,*,/, calc(100% - 빼고자 하는 값), ie9버전 이상 사용 가능 */
+
+			.box_input {border:1px solid #f37573;width:500px;height:30px;background:#fff;}
+			.box_input > input {width:calc(100% - 100px);height:30px;vertical-align:middle;border:none;box-sizing:border-box;} /* 기본적으로 갖고 있는 패딩 값을 width,height값에 포함 시켜서 계산해주기 위한 css : box-sizing */
+			.box_input > button {width:85px;height:30px;vertical-align:middle;background:transparent;border:none;}
 			
 		</style>
 
@@ -18,7 +25,7 @@
 			<div class="unit">
 				<div class="box_input">
 					<input>
-					<button></button>
+					<button>button</button>
 				</div>
 			</div>
 		</div>

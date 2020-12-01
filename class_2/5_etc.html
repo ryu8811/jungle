@@ -6,14 +6,14 @@
     <title>html</title>
 		<style>
 			body, h1{margin:0}
-			a{color:#fff}
+			/* a{color:#fff} */
 
 			.header{
 				background:#333;
 				color:#fff;
 				padding:20px;
 			}
-			.arrcordion{
+			/*.arrcordion{
 				padding:30px;
 			}
 			.arrcordion > ul{
@@ -51,6 +51,51 @@
 			}
 			.arrcordion > ul > li:hover > a:after{
 				transform: rotate(180deg);
+			}*/
+
+			.arrcordion {
+				padding:30px;
+			}
+			.arrcordion > ul {
+				padding:0;
+			}
+			.arrcordion > ul > li {
+				list-style:none;
+			}
+			.arrcordion > ul > li > a {
+				background:#333;
+				height:50px;
+				line-height:50px;
+				display:block;
+				color:#fff;
+				padding-left:10px;
+				text-decoration:none;
+				position:relative;
+			}
+			.arrcordion > ul > li:hover a {
+				color:#f88;
+				background:#666;
+			}
+			.arrcordion > ul > li > a:after {
+				content: ' ▽ ';
+				position:absolute;
+				right:10px;
+				transition:transform 0.5s;
+			}
+			.arrcordion > ul > li:hover > a:after {
+				transform:rotate(180deg)
+			}
+			.arrcordion > ul > li .subs {
+				height:0;
+				overflow:hidden;
+				background:#eee;
+				transition:height 0.5s;
+			}
+			.arrcordion > ul > li .subs p {
+				padding:20px;
+			}
+			.arrcordion > ul > li:hover .subs {
+				height:200px;
 			}
 		</style>
 
