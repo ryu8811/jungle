@@ -8,8 +8,15 @@
 	<script src="js/jquery-1.8.3.min.js"></script>
 	<script>
 		$(function(){
+			var selected;
 			$(".arrcordion .btn_toggle").click(function(){
-				$(this).next().slideToggle();
+				selected = $(this).parent().index();
+				for(var i=0; i<5; i++){
+					if(i != selected){
+						$(".arrcordion li").eq(i).find(".subs").slideUp();
+					}
+				}
+				$(this).next().slideDown();
 			});
 		})
 	</script>

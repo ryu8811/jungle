@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width">
     <title>html</title>
 		<link href="css/reset.css" rel="stylesheet" type="text/css" />
-		
+		<script src="js/jquery-1.8.3.min.js"></script>
 		<style>
 			a{color:#fff}
 
@@ -29,7 +29,7 @@
 				display: inline-block;
 				vertical-align:middle;
 			}
-			.box:hover{
+			.box.on{
 				width:200px;
 				height:200px;
 				background:#ff0000;
@@ -37,6 +37,17 @@
 				transform:rotate(90deg);
 			}
 		</style>
+		<script>
+			var num = 0;
+			setInterval(function(){
+				$(".section .box").removeClass("on");
+				$(".section .box").eq(num).addClass("on");
+				num++;
+				if(num == 3){
+					num =0;
+				}
+			},1000);
+		</script>
 
   </head>
   <body>

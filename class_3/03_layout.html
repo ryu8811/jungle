@@ -53,6 +53,19 @@
 				transform:scale(2) rotate(45deg);
 				background:#870000;
 			}
+
+			.tbl {padding:20px 0;}
+			.tbl p {width:100%;display:flex;border-bottom:1px solid #eee;}
+			.tbl p:first-child {border-top:1px solid #eee;}
+			.tbl p > span {flex:1;border-right:1px solid #eee;background:#e5e5e5;padding:8px;}
+			.tbl p > input {width:80%;height:15spx;border:1px solid #e5e5e5;margin:5px;}
+			
+			@media all and (max-width:768px) {
+				.tbl p {width:100%;display:block;border:none;}
+				.tbl p:first-child {border-top:none;}
+				.tbl p > span {display:block;background:#fff;border:none;}
+				.tbl p > input {width:100%;}
+			}
 			
 		</style>
 
