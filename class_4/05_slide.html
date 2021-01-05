@@ -8,12 +8,33 @@
     <script src="js/jquery-1.8.3.min.js"></script>
 		<style>
 			.wrap{padding:50px;text-align:center;}
-			.wrap .box{height:200px; background:#da56be; display: none;}
+			.wrap .box{height:200px; background:#da56be; _display: none;}
 		</style>
 		<script>
       $(function(){
         //$(".wrap .box").slideUp(2000);
-        $(".wrap .box").slideDown(2000);
+        //$(".wrap .box").slideDown(2000);
+
+        //$(".wrap .box").slideUp(2000); // 있다가 사라지는 기능
+        //$(".wrap .box").slideDown(5000); // 없어졌다 생기는 기능 (display:none 과 같이)
+        //$(".wrap .box").slideToggle(5000);//display:none 여부에 따라 사라지거나 생기거나
+        
+        //페이지 로드 시 반응
+        // $(".wrap .box").animate({ 
+        //     height:"400px",
+        //     width:"400px"
+        //   }, 5000);// animate 에도 시간의 개념이 필요하다
+        
+
+        // 클릭시 반응
+        $(".wrap .box").click(function(){ //click을 햇을 때
+          $(".wrap .box").animate({ 
+            height:"400px",
+            width:"400px"
+          }, 5000);// animate 에도 시간의 개념이 필요하다
+        });
+        
+
       });
 
       

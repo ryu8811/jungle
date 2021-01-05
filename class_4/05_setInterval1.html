@@ -47,16 +47,16 @@
 			$(function(){
 				var num = 0;
 				setInterval(function(){
-					$(".visual .unit").removeClass("on");
-					$(".visual .unit").eq(num).addClass("on");
-					console.log(num)
-					num++;
-					if(num == 3){
-						num = 0;
+					$(".visual .unit").removeClass("on"); //초기화
+					$(".visual .unit").eq(num).addClass("on"); //선택한 태그에 클래스 추가
+					console.log(num) // 콘솔 확인
+					num++; // 숫자가 증가
+					if(num == 3){ //변수가 3이 되는 순간
+						num = 0; //0으로 돌려준다
 					}
 					
-				},5000)
-			});
+				},5000)//delay 는 5초
+			}); //css로 작업했을때보다 수정이 용이하다.
 		</script>
 
   </head>

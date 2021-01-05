@@ -14,12 +14,58 @@
 			}
 		</style>
 		<script>
+			// html 로드가 다 되고 난 이후에 실행되는 제이쿼리
+
 			$(function(){
-				//$(".btn").find("span").css({"border":"1px solid #000"})
-				$(".btn").eq(1).addClass("on");
-				$(".btn").eq(3).removeClass("on");
-				$(".btn").eq(1).toggleClass("on");
-			})
+				///////// 선택자
+				// $(".btn > span ").css({
+					// "border":"1px solid #000"
+				// })//.btn 안에 바로 밑에 있는 span
+				$(".btn").eq(2).css({ // .css 는 자바스크립트에는 없고 편리를 위해 제이쿼리에만 있는 기능, 여러 css를 적용하고 싶을 경우 세미콜론을 이용
+					"border":"3px solid #f00"
+				})// .eq는 nth-child 와 같은 의미
+				$(".btn").next().css({
+					"color":"#f69834"
+				})//선택한 태그를 제외하고 그 다음부터 적용
+				$(".btn").parent().css({
+					"background":"#333"
+				})//선택자의 부모
+				$(".btn").find("span").css({
+					"font-weight":"bold"
+				})//첫번째와 비슷한 개념. 자식 중에 찾아라
+
+				///////// class
+				// addClass(추가), removeClass(제거), toggleClass(on&off)
+				//$(".btn").eq(0).addClass("on"); //클래스를 새로 추가해 줄 수 있다.
+
+
+
+				// $(".btn").click(function(){
+				// 	alert("click");
+				// });
+
+				// $(".btn").click(function(){
+				// 	$(".btn").eq(0).addClass("on");
+				// });
+				$(".btn").eq(3).removeClass("on");//클래스 삭제
+
+
+
+				$(".btn").click(function(){
+					//$(this).addClass("on");//$(this) = 나 자신
+					$(this).toggleClass("on");
+				});
+
+			});
+
+
+
+			// $(function(){
+			// 	//$(".btn").find("span").css({"border":"1px solid #000"})
+			// 	$(".btn").eq(1).addClass("on");
+			// 	$(".btn").eq(3).removeClass("on");
+			// 	$(".btn").eq(1).toggleClass("on");
+			// })
 		</script>
   </head>
   <body>

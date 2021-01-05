@@ -18,9 +18,13 @@
         //   width:"1000px"
         // },2000)
         
+        // $(".wrap .ipt").keypress(function(event){
+        //   var value = event.key;
+        //   $(".wrap .print").text(value);
+        // });
+
         $(".wrap .ipt").keypress(function(event){
-          var value = event.key;
-          $(".wrap .print").text(value);
+          alert(event.key);//click의 경우 좌클릭에만 반응하는 함수라면 keypress의 경우 반응하는 키의 정보를 얻을 수 있다.
         });
       });
 

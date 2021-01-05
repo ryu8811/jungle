@@ -36,16 +36,32 @@
 	</style>
 	<script>
 		$(function () {
+
+
+			$(window).scroll(function(){
+				console.log($(this).scrollTop());			
+			});
+
+			// 클릭 시 500px 밑으로 이동
+			$(".btn_top").click(function(){
+				//$(window).scrollTop(500);
+				$("html").animate({
+					"scrolllTop":500
+				},1000)
+			})
+			
+			// 스크롤이 최상위에 있을 때 숨김, 일정 수치보다 커지면 보여지고 작아지면 숨김
 			$(".btn_top").hide();
 			$(window).scroll(function(){
 				//console.log($(this).scrollTop());
 				if($(this).scrollTop() == 0){
 					$(".btn_top").hide(300);
 				}else{
-					$(".btn_top").show(300);
+					$(".btn_top").show(300); //나타냄
 				}
-			})
+			});
 
+			// 버튼 클릭 시 최상위로
 			$(".btn_top").click(function(){
 				//$("html").scrollTop(0);
 				$("html").animate({

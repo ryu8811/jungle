@@ -38,15 +38,29 @@
 			}
 		</style>
 		<script>
-			var num = 0;
-			setInterval(function(){
-				$(".section .box").removeClass("on");
-				$(".section .box").eq(num).addClass("on");
-				num++;
-				if(num == 3){
-					num =0;
-				}
-			},1000);
+			// var num = 0;
+			// setInterval(function(){
+			// 	$(".section .box").removeClass("on");
+			// 	$(".section .box").eq(num).addClass("on");
+			// 	num++;
+			// 	if(num == 3){
+			// 		num =0;
+			// 	}
+			// },1000);
+			$(function(){
+				//$(".section .box").eq(0).addClass("on");
+				var index = 0;
+				setInterval(function(){
+					//console.log("실행")
+					$(".section .box").removeClass("on"); //초기화
+					$(".section .box").eq(index).addClass("on"); //선택한 태그에 클래스 추가
+					index++;//변수와 증가 연산자를 이용하여 3초 마다 반응하게끔 작업
+					if(index == 3){ //idex가 3이 되었을때(조건문)
+						index = 0; //값을 0으로 
+					}
+				},2000)
+			})
+			
 		</script>
 
   </head>
