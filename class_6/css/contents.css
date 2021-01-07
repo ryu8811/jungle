@@ -1,3 +1,11 @@
+.section{
+	display:none;
+}
+.section.on {
+	display:block;
+}
+
+/* 초기화면 */
 .box_intro{
 	padding:30px 0;
 	text-align: center;
@@ -12,6 +20,7 @@
 	cursor: pointer;
 }
 
+/* 자리선택 */
 .section.reservation{
 	width:590px;
 	margin:0 auto;
@@ -44,14 +53,18 @@
 .section.reservation .unit button:hover{
 	background:#78ab55;
 }
+
+/* 예약완료 자리 */
 .section.reservation .unit button[disabled],
-.section.reservation .unit button[disabled]:hover
+.section.reservation .unit button[disabled]:hover /* 비활성화 속성에만 적용할 내용 */
 {
   background:#BABABA url(../img/img_disabled.png) no-repeat;
   background-size:100% 100%;
   text-indent: -9999px;
   cursor:default;
 }
+
+/* 선택된 자리 */
 .section.reservation .unit button.select{
 	background: #FF5F40;
   color:#fff;
@@ -62,6 +75,7 @@
   background: #de472a;
 }
 
+/* 선택된 자리 정보 */
 .section.reservation .box_info{
 	padding:15px;
 	background: #000;
