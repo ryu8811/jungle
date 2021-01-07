@@ -34,11 +34,15 @@
 		}
 	</style>
 	<script>
+		// 제이쿼리의 기본 매소드(함수) 중 하나,append를 통해 가공하거나 추가하거나 할 수 있다.
+		// 제이쿼리를 통해 동적으로 마크업 태그를 추가하는 매소드
 		$(function () {
-			var countNum = 0;
+			var countNum = 0; //카운팅을 위한 기본 변수
 			$(".btn_add").click(function(){
-				countNum++;
-				$(".section.list > ul").append("<li class='unit'><a href='#'>버튼"+countNum+"</a></li>");
+				countNum++; // 증가 연산자의 위치는 append 뒤에 와도 상관없음
+				$(".section.list > ul").append("<li class='unit'><a href='#'>버튼"+countNum+"</a></li>");//한줄로 표현
+				// 따옴표의 경우 싸고 있는 따옴표와 안에 있는 따옴표를 구분해서 사용.
+				// 변수 countNum 을 문자로 인식하지 않도록 ''+countNum+''
 			});
 		})
 	</script>

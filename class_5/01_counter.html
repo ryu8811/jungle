@@ -12,23 +12,26 @@
 	<script>
 		$(function () {
 			var countNum = 0;//현재 카운트를 나타내는 변수
-			var intervalVar; //카운팅되는 setInterval을 담는 변수
+			var intervalVar; //카운팅되는 setInterval을 제어하기 위한 목적으로 담는 변수
 
 			$(".btn_start").click(function(){
-				intervalVar = setInterval(function(){
+				intervalVar = setInterval(function(){ //변수에 단순한 숫자 뿐만 아니라 함수도 넣어서 사용 할 수 있다.
 					countNum++;
+					console.log(countNum);
 					$(".txt_Number").text(countNum);//text - 선택된 대상의 값을 변경시킴
-				}, 1000);
+				}, 1000);//setInterval 을 변형하거나 조절하기 위해 변수에 담음
 			});
 
+			//카운터 멈춤
 			$(".btn_stop").click(function(){
 				clearInterval(intervalVar); //setInterval을 멈추는 메소드;
 			});
 
+			//카운터 초기화
 			$(".btn_reset").click(function(){
-				clearInterval(intervalVar);
-				countNum = 0;
-				$(".txt_Number").text(countNum);
+				clearInterval(intervalVar); //1.카운터를 일시적으로 멈춤
+				countNum = 0; //2.변수값을 0으로 돌린다
+				$(".txt_Number").text(countNum);//3.txt_Number의 값을 새로운 값으로 업데이트
 			});
 
 

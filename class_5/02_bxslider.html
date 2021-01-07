@@ -10,13 +10,25 @@
     <script src="js/jquery.bxslider.min.js"></script>
 		<script>
       $(function(){
+        // $(".slider").bxSlider({
+        //   //각종 옵션 추가 시 이 영역에 추가 할 수 있다. 홈페이지 참고
+        //   pager:false, //하단 페이지 아이콘 제거
+        //   controls:false, //양 옆 버튼 제거
+        //   auto:true, //자동 넘김
+        //   pause:3000, //자동 넘김 시간 조절
+        //   speed:1000, //넘어가는 시간 조절
+        //   //mode:vertical, //상하 넘김(넘김 효과 조절,기본값은 horizen)
+        // });
+
+        //$("선택자").플러그인정의함수(); 의 형태로 다른 플러그인도 사용 가능
+
+        // bxslider 커스텀마이징 두번째 방법
         $(".slider").bxSlider({
-			onSlideAfter:function($slideElement, oldIndex, newIndex){
-				
-				$(".slider > div").removeClass("on");
-				$slideElement.addClass("on");
-			}
-		}); //bxSlider 플러그인 호출하는 방법;
+          onSlideAfter:function($slideElement, oldIndex, newIndex){
+            $(".slider > div").removeClass("on");
+            $slideElement.addClass("on");
+          }
+		    }); //bxSlider 플러그인 호출하는 방법;
       });
     </script>
     <style>
@@ -28,16 +40,17 @@
         font-weight: bold;
 
       }
-	  .slider > div > span{
-	  	transition:all .5s;
-		display:inline-block;
-		transform:translateY(50px);
-		opacity:0
-	  }
-	  .slider > div.on > span{
-		transform:translateY(0px);
-		opacity:1;
-	  }
+      .slider > div
+      .slider > div > span{
+        transition:all .5s;
+        display:inline-block;
+        transform:translateY(50px);
+        opacity:0
+      }
+      .slider > div.on > span{
+        transform:translateY(0px);
+        opacity:1;
+      }
       .bx-wrapper .bx-controls-direction a{
         background-color: red;
       }

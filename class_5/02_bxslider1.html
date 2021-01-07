@@ -29,10 +29,11 @@
 
 			// 하단 상품 3개씩 정렬한 배너
 			$(".section.box > ul").bxSlider({
+				// bxSlider의 또 다른 옵션값 
 				minSlides:3,
 				maxSlides:3,
 				moveSlides:3,
-				slideWidth:"330px"
+				slideWidth:"330px" // 전체 width 값 기준으로 계산하여 지정. 전체 값보다 합한 값이 클 경우 틀이 깨지지않고 배치가 유지된다.
 			});
 		})
 
