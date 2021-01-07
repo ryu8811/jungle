@@ -14,14 +14,14 @@ $(function(){
             dataType:"json",
             success:function(result){ // 성공했을때의 값을 받을 result라는 임의의 변수
                 loadData = result.seatInfo;
-                settingSeatFn();
-                console.load(loadData);
+                //settingSeatFn();
+                console.log(loadData);
             }
         });
     };
 
-    // 자리 배치
-    function settingSeatFn(){
+    // // 자리 배치
+    // function settingSeatFn(){
 
-    }
+    // }
 })
