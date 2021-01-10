@@ -53,7 +53,7 @@
 						url:"js/data.json", // ajax로 불러올 데이터의 url
 						dataType:"json", //데이터 타입을 적어주지 않으면 하나의 문자로 인식
 						success: function(result){ // result 라는 변수에 데이터 변수를 담는다.
-							loudData = result.seatInfo;
+							loadData = result.seatInfo;
 							loadSuccessFn();
 						} //성공했을때의 반응
 					});
@@ -66,12 +66,12 @@
 					// 	var p = loadData[i].price;
 					// 	console.log(n, p);
 					// }
-					// console.log(loudData[3].price)
-					for(var i=0; i<loudData.length; i++){
-						//console.log(loudData[i].name)
-						//console.log(loudData[i].price)
-						var n = loudData[i].name;
-						var p = loudData[i].price;
+					// console.log(loadData[3].price)
+					for(var i=0; i<loadData.length; i++){
+						//console.log(loadData[i].name)
+						//console.log(loadData[i].price)
+						var n = loadData[i].name;
+						var p = loadData[i].price;
 						console.log(n,p)
 						$(".section.list > ul").append('<li class="unit" data-price="'+p+'"><a href="#">'+n+'</a></li>');
 					}
